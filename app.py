@@ -36,9 +36,9 @@ if st.button('Get Recommendations', help="Click to see recommended games based o
     game_details = df[df['name'] == selected_game].iloc[0]
     
     st.header("Selected Game:")
-    st.markdown(f"<p style='font-size: 20px; font-weight: bold;'>{game_details['name']}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size: 25px; font-weight: bold;'>{game_details['name']}</p>", unsafe_allow_html=True)
     selected_game_url = f"https://rawg.io/games/{game_details['id']}"
-    st.markdown(f"<a href='{selected_game_url}'><img src='{game_details['poster']}' width='600'></a>", unsafe_allow_html=True)
+    st.markdown(f"<a href='{selected_game_url}'><img src='{game_details['poster']}' width='700'></a>", unsafe_allow_html=True)
     
     about_text = game_details['about']
     if isinstance(about_text, list):
@@ -49,8 +49,8 @@ if st.button('Get Recommendations', help="Click to see recommended games based o
     st.markdown("---")
     st.header("Recommended Games:")
     for name, poster, url in zip(recommended_game_names, recommended_game_posters, recommended_game_urls):
-        st.markdown(f"<p style='font-size: 20px; font-weight: bold;'>{name}</p>", unsafe_allow_html=True)
-        st.markdown(f"<a href='{url}'><img src='{poster}' width='450'></a>", unsafe_allow_html=True)
+        st.markdown(f"<p style='font-size: 25px; font-weight: bold;'>{name}</p>", unsafe_allow_html=True)
+        st.markdown(f"<a href='{url}'><img src='{poster}' width='500'></a>", unsafe_allow_html=True)
         st.markdown("<hr>", unsafe_allow_html=True)
 
     reviews = game_details['reviews']
