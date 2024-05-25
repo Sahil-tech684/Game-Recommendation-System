@@ -21,13 +21,8 @@ A Streamlit application that recommends games based on a selected game and displ
     git clone https://github.com/yourusername/Game-Recommendation-System.git
     cd Game-Recommendation-System
     ```
-
-2. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. Download the pre-trained model from [Google Drive](https://drive.google.com/drive/folders/1AP-8RmNgTUGKMnBxud3uZMxczWQ8LHpF?usp=drive_link) and place it in the appropriate directory. Alternatively, you can create the model from scratch by following the steps in the [Usage](#usage) section.
+    
+2. Download the pre-trained model from [Google Drive](https://drive.google.com/drive/folders/1AP-8RmNgTUGKMnBxud3uZMxczWQ8LHpF?usp=drive_link) and place it in the appropriate directory. Alternatively, you can create the model from scratch by following the steps in the [Usage](#usage) section.
 
 ## Usage
 
