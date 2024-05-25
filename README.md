@@ -8,6 +8,7 @@ A Streamlit application that recommends games based on a selected game and displ
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Contact](#contact)
 
 ## Features
 - **Game Recommendations**: Get game recommendations based on the selected game.
