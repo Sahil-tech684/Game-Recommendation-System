@@ -5,17 +5,14 @@ import numpy as np
 from transformers import pipeline
 from typing import List, Tuple
 
-# Load sentiment analysis pipeline
 sentiment_analysis = pipeline("sentiment-analysis")
 
-# Caching the loading of data
 @st.cache_data
 def load_data() -> Tuple[pd.DataFrame, np.ndarray]:
     df = pickle.load(open('model/games_list.pkl', 'rb'))
     similarity = pickle.load(open('model/similarity.pkl', 'rb'))
     return df, similarity
 
-# Optimized recommend function
 def recommend(game: str, df: pd.DataFrame, similarity: np.ndarray) -> Tuple[List[str], List[str], List[str]]:
     index = df[df['name'] == game].index[0]
     distances = similarity[index]
@@ -25,10 +22,8 @@ def recommend(game: str, df: pd.DataFrame, similarity: np.ndarray) -> Tuple[List
     recommended_game_posters = df.iloc[recommended_indices]['poster'].tolist()
     return recommended_game_names, recommended_game_urls, recommended_game_posters
 
-# Load data
 df, similarity = load_data()
 
-# Streamlit app interface
 st.title('Welcome to the Game Recommender System')
 st.subheader('Discover new games based on your favorite ones!')
 
